@@ -22,11 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: databricks/setup-cli@main
-      - name: Validate Bundle For Staging
+      - name: Validate Bundle For dev
         id: validate
         run: |
-          databricks bundle validate -t staging
-      - name: Deploy Bundle to Staging
+          databricks bundle validate -t dev
+      - name: Deploy Bundle to dev
         id: deploy
         run: |
-          databricks bundle deploy -t staging
+          databricks bundle deploy -t dev
