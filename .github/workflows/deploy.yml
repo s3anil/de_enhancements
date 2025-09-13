@@ -18,7 +18,7 @@ env:
 jobs:
   dev: 
     concurrency: deploy.yml
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: databricks/setup-cli@main
@@ -30,10 +30,13 @@ jobs:
         id: deploy
         run: |
           databricks bundle deploy -t dev
-      - uses: actions/checkout@v4
-      - name: Import directory to Databricks
-        uses: src/databricks-import-directory@v4
+  import_directory:
+    runs-on: ubuntu-latest
+    steps:
+          - uses: actions/checkout@v4 # Checkout the repository
+          - name: Import directory to Databricks
+            uses: databricks/databricks-import-directory@v1
         with:
-              source_path: "/src" # Path to the folder in your GitHub repo
-              target_path: "/Workspace/src/" # Target path in Databricks workspace
+              source_path: "src" # Path to the folder in your GitHub repo
+              target_path: "Workspace/src/" # Target path in Databricks workspace
               overwrite: true # Optional: Set to true to overwrite existing files
