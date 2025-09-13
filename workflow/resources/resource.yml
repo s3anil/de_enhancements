@@ -1,20 +1,16 @@
 resources:
   jobs:
-    negative_review_job:
-      name: negative_review_job
+    daily_refresh_generator:
+      name: daily_refresh_generator
       tasks:
-        - task_key: create_neg_review_table
+        - task_key: run_negative_gen
           notebook_task:
             notebook_path: /Workspace/src/negative_review_generator
             source: WORKSPACE
       queue:
         enabled: true
-      performance_target: STANDARD
+      performance_target: PERFORMANCE_OPTIMIZE
 
-      schedule:
-        # Run every day at 8:37 AM
-        quartz_cron_expression: '44 37 8 * * ?'
-        timezone_id: Europe/Amsterdam
 
       # can send an email on pipeline failure, although GitHub will also do this
       # email_notifications:
