@@ -32,4 +32,4 @@ jobs:
           databricks bundle deploy -t dev
       - name: copy from github notebook
         run: |
-          databricks workspace import_dir ./src /workspace/src --overwrite
+          databricks workspace import-dir ./src /workspace/src --overwrite
