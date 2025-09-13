@@ -10,7 +10,10 @@ resources:
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
-
+  sync:
+    paths:
+          - de_enhancements/src/ # Relative path within your Git folder
+          - /Workspace/src # To sync an entire folder
 
       # can send an email on pipeline failure, although GitHub will also do this
       # email_notifications:
