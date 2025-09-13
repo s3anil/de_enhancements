@@ -31,7 +31,5 @@ targets:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
-    sync:
-      include:
-       - ./workspace/src/negative_review_generator.py
+
        
