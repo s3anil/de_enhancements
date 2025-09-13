@@ -27,12 +27,11 @@ targets:
     default: true
     workspace:
       host: https://dbc-c741477f-0f7d.cloud.databricks.com/?o=3178695042235081
-      file_path: /Workspace/src
     variables:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
     sync:
       include:
-       - ./src/negative_review_generator.py
+       - ./workspace/src/negative_review_generator.py
        
