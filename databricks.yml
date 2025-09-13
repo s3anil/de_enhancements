@@ -27,11 +27,11 @@ targets:
     default: true
     workspace:
       host: https://dbc-c741477f-0f7d.cloud.databricks.com/?o=3178695042235081
+      file_path: /Workspace/
     variables:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
     sync:
       paths:
-          - /src # Relative path within your Git folder
-          - /Workspace/src # To sync an entire folder
+          - .src/ # Relative path within your Git folder
