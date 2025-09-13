@@ -11,7 +11,7 @@
     steps:
           - uses: actions/checkout@v4 # Checkout the repository
           - name: Import directory to Databricks
-            uses: databricks/databricks-import-directory@v1
+            uses: src/databricks-import-directory@v1
         with:
               source_path: "src" # Path to the folder in your GitHub repo
               target_path: "Workspace/src/" # Target path in Databricks workspace
