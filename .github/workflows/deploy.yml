@@ -25,7 +25,7 @@ jobs:
       - name: destroy bundle
         id: destroy
         run: |
-          databricks bundle destroy -t dev
+          databricks bundle destroy --auto-approve -t dev
       - name: Validate Bundle For dev
         id: validate
         run: |
