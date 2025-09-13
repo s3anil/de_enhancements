@@ -16,7 +16,7 @@ env:
   DATABRICKS_CLIENT_SECRET: dose6424c005fdfc57ccb1bc9e737a9970a4
   DATABRICKS_HOST: https://dbc-c741477f-0f7d.cloud.databricks.com/
 jobs:
-  staging: 
+  dev: 
     concurrency: deploy.yml
     runs-on: ubuntu-22.04
     steps:
