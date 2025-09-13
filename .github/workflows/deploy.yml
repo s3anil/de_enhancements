@@ -30,7 +30,12 @@ jobs:
         id: deploy
         run: |
           databricks bundle deploy -t dev
-      - name: Copy files
-        id: copy
-        run: |
-          databricks workspace import  /Workspace/src
+      - name: Import directory to Databricks
+        uses: databricks-import-directory@v1
+        with:
+              databricks_host: https://dbc-c741477f-0f7d.cloud.databricks.com/
+              DATABRICKS_CLIENT_ID: dde9580d-c31d-4acf-8481-2cacab11e873
+              DATABRICKS_CLIENT_SECRET: dose6424c005fdfc57ccb1bc9e737a9970a4
+              source_path: "/src" # Path to the folder in your GitHub repo
+              target_path: "/Workspace/src/" # Target path in Databricks workspace
+              overwrite: true # Optional: Set to true to overwrite existing files
