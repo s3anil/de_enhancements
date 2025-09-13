@@ -33,4 +33,4 @@ targets:
       notifications: []
     sync:
       path:
-        - /databricks/src/
+        - ./databricks/src/
