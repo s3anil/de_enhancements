@@ -1,0 +1,18 @@
+    name: Import Directory to Databricks
+
+    on:
+      push:
+        branches:
+          - main # Trigger on push to the main branch
+
+    jobs:
+      import-directory:
+        runs-on: ubuntu-latest
+    steps:
+          - uses: actions/checkout@v4 # Checkout the repository
+          - name: Import directory to Databricks
+            uses: databricks/databricks-import-directory@v1
+        with:
+              source_path: "src" # Path to the folder in your GitHub repo
+              target_path: "Workspace/src/" # Target path in Databricks workspace
+              overwrite: true # Optional: Set to true to overwrite existing files
