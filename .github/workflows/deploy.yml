@@ -12,7 +12,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./mlops_stacks
+    working-directory: ./github/workflows
 
 env:
   ARM_CLIENT_ID: dde9580d-c31d-4acf-8481-2cacab11e873
