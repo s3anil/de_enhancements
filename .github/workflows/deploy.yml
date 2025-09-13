@@ -32,4 +32,4 @@ jobs:
           databricks bundle deploy -t dev
       - name: Copy files
         id: copy
-        run: cp -R /Workspace/Users/dde9580d-c31d-4acf-8481-2cacab11e873/.bundle/de_enhancements/dev/files/src/ /Workspace/src
+        run: cp -R /src/ /Workspace/src
