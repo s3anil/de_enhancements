@@ -32,6 +32,4 @@ targets:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
-    sync:
-      paths:
-          - ~/src/ # Relative path within your Git folder
+
