@@ -23,16 +23,16 @@ targets:
     # - Deployed resources get prefixed with '[dev my_user_name]'
     # - Any job schedules and triggers are paused by default.
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
-    mode: development
+    mode: production
     default: true
     workspace:
       host: https://dbc-c741477f-0f7d.cloud.databricks.com/?o=3178695042235081
-      file_path: /Workspace/Users/dde9580d-c31d-4acf-8481-2cacab11e873/.bundle/de_enhancements/dev/src/*.py
+      file_path: /Workspace/src
     variables:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
     sync:
       include:
-       - ./Workspace/src/*.py
+       - ./src/*.py
        
