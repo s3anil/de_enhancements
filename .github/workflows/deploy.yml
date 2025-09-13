@@ -33,4 +33,4 @@ jobs:
       - name: Copy files
         id: copy
         run: |
-          databricks workspace import --overwrite --format SOURCE ./src /Workspace/src
+          databricks workspace import --overwrite --format /src /Workspace/src
