@@ -22,10 +22,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: databricks/setup-cli@main
-      - name: destroy bundle
-        id: destroy
-        run: |
-          databricks bundle destroy --auto-approve -t dev
       - name: Validate Bundle For dev
         id: validate
         run: |
