@@ -34,4 +34,4 @@ targets:
       notifications: []
     sync:
       paths:
-          - .src/ # Relative path within your Git folder
+          - ~/src/ # Relative path within your Git folder
