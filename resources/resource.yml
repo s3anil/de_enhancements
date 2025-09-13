@@ -10,8 +10,12 @@ resources:
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
-sync:
-  paths:
+targets:
+  test:
+    workspace:
+      file_path: /Workspace/
+    sync:
+      paths:
           - /Workspace/Users/s3anil@gmail.com/.bundle/de_enhancements/dev/file/src # Relative path within your Git folder
           - /Workspace/src # To sync an entire folder
 
