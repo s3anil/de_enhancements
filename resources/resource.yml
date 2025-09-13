@@ -10,8 +10,8 @@ resources:
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
-  sync:
-    paths:
+sync:
+  paths:
           - de_enhancements/src/ # Relative path within your Git folder
           - /Workspace/src # To sync an entire folder
 
