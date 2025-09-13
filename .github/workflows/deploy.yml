@@ -31,6 +31,7 @@ jobs:
         run: |
           databricks bundle deploy -t dev
 # 5. Import a local directory into Databricks Workspace sr
+      - uses: actions/checkout@v3
       - name: Import notebooks to Databricks
         run: |
           databricks workspace import-dir ./src /workspace/src --overwrite
