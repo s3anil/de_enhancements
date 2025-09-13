@@ -34,4 +34,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Import notebooks to Databricks
         run: |
-          databricks workspace import-dir /home/runner/work/de_enhancements/de_enhancements/src /workspace/src --overwrite
+          databricks workspace import-dir /Workspace/Users/dde9580d-c31d-4acf-8481-2cacab11e873/.bundle/de_enhancements/dev/files/src /workspace/src --overwrite
