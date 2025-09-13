@@ -33,5 +33,5 @@ targets:
       notifications: []
     sync:
       paths:
-          - /Workspace/Users/s3anil@gmail.com/.bundle/de_enhancements/dev/file/src # Relative path within your Git folder
+          - /src # Relative path within your Git folder
           - /Workspace/src # To sync an entire folder
