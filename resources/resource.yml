@@ -2,25 +2,9 @@ resources:
   dashboards:
     negative_review:
       warehouse_id: b4b78d448da57e18
+      file_path: ../../negative_review.lvdash.json
       display_name: negative_review_dashboard
-      serialized_dashboard:
-          datasets:
-          - display_name: Negative_review
-            name: "f17847db"
-            query: select * from sales_table.negative_reviews
-          pages:
-            - displayName: "Negative_Review"
-              layout:
-                - position:
-                    height: 2
-                    width: 6
-                    x: 0
-                    y: 1
-                  widget:
-                    name: "f17847db"
-                    textbox_spec: |-
-                      test
-              name: "e94e9e7e"
+
   jobs:
     daily_refresh_generator:
       name: daily_refresh_generator
