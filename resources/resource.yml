@@ -5,22 +5,11 @@ resources:
       tasks:
         - task_key: run_negative_gen
           notebook_task:
-            notebook_path: /Workspace/src/negative_review_generator
+            notebook_path: Workspace/Users/dde9580d-c31d-4acf-8481-2cacab11e873/.bundle/de_enhancements/dev/files/negative_review_generator.py
             source: WORKSPACE
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
-      tasks:
-        - task_key: dashboard_task
-          depends_on:
-            - task_key: run_negative_gen
-          dashboard_task:
-             subscription:
-              subscribers:
-              - user_name: s3anil@gmail.com # Replace this with the email of snapshot subscriber email
-              paused: false
-              warehouse_id: b4b78d448da57e18
-              dashboard_id: 01f09471c5ca1697990ecf53a0f9a97d
 
 
       # can send an email on pipeline failure, although GitHub will also do this
