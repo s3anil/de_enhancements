@@ -33,6 +33,6 @@ targets:
       notifications: []
     sync:
       paths:
-        - ./home/runner/work/de_enhancements/negative_review.lvdash.json # Example: Sync all notebooks from a local 'src/notebooks' folder
+        - ./home/runner/work/de_enhancements/ # Example: Sync all notebooks from a local 'src/notebooks' folder
  
        
