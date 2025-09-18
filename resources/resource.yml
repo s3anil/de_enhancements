@@ -1,6 +1,6 @@
 resources:
   dashboards:
-    my_dashboard:
+    negative_review_dashboard:
       path: /Volumes/sales_review/sales_table/dashboard/negative_review.lvdash.json # Path to your dashboard in the workspace
       target_path: /Workspace/Shared/ # Desired path in the target wo
       warehouse_id: b4b78d448da57e18
