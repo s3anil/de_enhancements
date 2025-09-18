@@ -1,7 +1,6 @@
 resources:
   dashboards:
     negative_review:
-      file_path: /Volumes/sales_review/sales_table/dashboard/negative_review.lvdash.json # Path to your dashboard in the workspace
       warehouse_id: b4b78d448da57e18
       display_name: negative_review_dashboard
       serialized_dashboard:
