@@ -27,6 +27,7 @@ targets:
     default: true
     workspace:
       host: https://dbc-c741477f-0f7d.cloud.databricks.com/?o=3178695042235081
+      file_path: /home/runner/work/de_enhancements/
     variables:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
