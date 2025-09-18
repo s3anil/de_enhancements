@@ -1,7 +1,7 @@
 resources:
   dashboards:
     negative_review:
-      warehouse_id: b4b78d448da57e18
+      warehouse_id: 
       file_path: ../../negative_review.lvdash.json
       display_name: negative_review_dashboard
 
@@ -16,6 +16,17 @@ resources:
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
+      tasks:
+        - task_key: dashboard_task
+          depends_on:
+            - task_key: run_negative_gen
+          dashboard_task:
+             subscription:
+              subscribers:
+              - user_name: s3anil@gmail.com # Replace this with the email of snapshot subscriber email
+              paused: false
+              warehouse_id: b4b78d448da57e18
+              dashboard_id: 01f09471c5ca1697990ecf53a0f9a97d
 
 
       # can send an email on pipeline failure, although GitHub will also do this
