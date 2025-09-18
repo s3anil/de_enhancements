@@ -1,10 +1,4 @@
 resources:
-  dashboards:
-    negative_review:
-      warehouse_id: 
-      file_path: ../../negative_review.lvdash.json
-      display_name: negative_review_dashboard
-
   jobs:
     daily_refresh_generator:
       name: daily_refresh_generator
