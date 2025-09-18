@@ -24,7 +24,7 @@ jobs:
       - uses: databricks/setup-cli@main
       - name: Validate Bundle For dev
         id: validate
-        run:  curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh
+        run:  |
           databricks bundle validate -t dev
       - name: Deploy Bundle to dev
         id: deploy
