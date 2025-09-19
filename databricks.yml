@@ -36,6 +36,6 @@ targets:
       schema: ${workspace.current_user.short_name}
       notifications: []
 sync:
-  include:
+  include: #
     - path: /home/runner/work/de_enhancements/src/
 
