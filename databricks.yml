@@ -18,6 +18,7 @@ variables:
     description: The email addresses to use for failure notifications
   user_name:
     description: user_name used in prod 
+    default: s3anil
 
 targets:
   dev:
