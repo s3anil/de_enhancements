@@ -9,7 +9,7 @@ from textblob import TextBlob
 from pyspark.sql.functions import col
 
 # Load the table into a DataFrame
-data = spark.table("workspace.default.media_customer_reviews")
+data = spark.table("samples.bakehouse.media_customer_reviews")
 
 # Convert Spark DataFrame to Pandas DataFrame
 df = data.toPandas()
@@ -42,4 +42,4 @@ print(negative_reviews)
 negative_reviews_spark = spark.createDataFrame(negative_reviews)
 
 # Create a table using the Spark DataFrame
-negative_reviews_spark.write.format("delta").mode("overwrite").saveAsTable("default.negative_reviews")
+negative_reviews_spark.write.format("delta").mode("overwrite").saveAsTable("sales_review.sales_table.negative_reviews")
