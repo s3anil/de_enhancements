@@ -10,6 +10,7 @@ resources:
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
+      
 
 
       # can send an email on pipeline failure, although GitHub will also do this
