@@ -5,7 +5,7 @@ resources:
       tasks:
         - task_key: run_negative_gen
           notebook_task:
-            notebook_path: Workspace/Users/${var.targets.user_name}/.bundle/de_enhancements/dev/files/negative_review_generator.py
+            notebook_path: Workspace/Users/${var.user_name}/.bundle/de_enhancements/dev/files/negative_review_generator.py
             source: WORKSPACE
       queue:
         enabled: true
