@@ -35,7 +35,8 @@ targets:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
-sync:
-  include: #
-    - path: /home/runner/work/de_enhancements/src/
+
+    sync:
+      paths:
+        - ./home/runner/work/de_enhancements/src/
 
