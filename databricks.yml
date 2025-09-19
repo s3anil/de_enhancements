@@ -36,8 +36,6 @@ targets:
       schema: ${workspace.current_user.short_name}
       notifications: []
 sync:
-  artifacts:
-    - path: notebooks/   #
-      target_path: /Workspace/src
+  include: #
+    - path: /home/runner/work/de_enhancements/src/
 
-       
