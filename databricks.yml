@@ -37,7 +37,7 @@ targets:
       notifications: []
 sync:
   artifacts:
-    - path: notebooks/
+    - path: notebooks/   #
       target_path: /Workspace/src
 
        
