@@ -31,5 +31,8 @@ targets:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
-
+sync:
+  artifacts:
+    - path: notebooks/   #
+      target_path: /Workspace/src
        
