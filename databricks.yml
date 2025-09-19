@@ -21,7 +21,7 @@ variables:
     default: s3anil
 
 targets:
-  dev:
+  production:
     # The default target uses 'mode: development' to create a development copy.
     # - Deployed resources get prefixed with '[dev my_user_name]'
     # - Any job schedules and triggers are paused by default.
