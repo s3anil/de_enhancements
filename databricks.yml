@@ -16,18 +16,22 @@ variables:
     description: The schema to use
   notifications:
     description: The email addresses to use for failure notifications
+  user_name:
+    description: user_name used in prod
 
 targets:
   dev:
+
     # The default target uses 'mode: development' to create a development copy.
     # - Deployed resources get prefixed with '[dev my_user_name]'
     # - Any job schedules and triggers are paused by default.
     # See also https://docs.databricks.com/dev-tools/bundles/deployment-modes.html.
-    mode: production
+    mode: dev
     default: true
     workspace:
       host: https://dbc-c741477f-0f7d.cloud.databricks.com/?o=3178695042235081
     variables:
+      user_name: dde9580d-c31d-4acf-8481-2cacab11e873
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
@@ -35,4 +39,5 @@ sync:
   artifacts:
     - path: notebooks/   #
       target_path: /Workspace/src
+
        
