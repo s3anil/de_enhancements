@@ -29,7 +29,6 @@ jobs:
       - name: Validate Bundle For dev
         id: validate
         run:  |
-          databricks bundle destroy --auto-approve
           databricks bundle validate -t dev
       - name: Deploy Bundle to dev
         id: deploy
