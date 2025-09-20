@@ -29,7 +29,7 @@ jobs:
 
       - name: Copy file from other branch
         run: |
-             cp ./temp-checkout/path/src/ ./workspace/src/
+             cp ./temp-checkout/src/*.py ./workspace/src/
 
       - name: Clean up temporary checkout
         run: |
