@@ -29,7 +29,8 @@ resources:
       name: daily_refresh_generator_trigger
       trigger:
           pause_status: UNPAUSED
-          file_arrival: /Volumes/sales_review/sales_table/trigger
+          file_arrival: 
+              url: /Volumes/sales_review/sales_table/trigger
       email_notifications:
           on_success:
           -  anil.kumar@axtria.com
