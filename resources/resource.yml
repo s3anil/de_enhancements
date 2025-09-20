@@ -1,11 +1,35 @@
 resources:
   jobs:
-    daily_refresh_generator:
+    daily_refresh_generator: #job1
       name: daily_refresh_generator
       schedule:
           quartz_cron_expression: '0 25 15 * * ?'
           timezone_id: Asia/Kolkata
           pause_status: UNPAUSED
+      email_notifications:
+          on_success:
+          -  anil.kumar@axtria.com
+          on_failure:
+          -  anil.kumar@axtria.com
+      tasks:
+        - task_key: run_negative_gen 
+          notebook_task:
+            notebook_path: /Workspace/src/negative_review_generator
+            source: WORKSPACE
+        - task_key: top_sales  
+          depends_on:
+           - task_key: run_negative_gen
+          notebook_task:
+            notebook_path: /Workspace/src/top_sales
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZE
+    daily_refresh_generator_trigger: #job2
+      name: daily_refresh_generator_trigger
+      trigger:
+          pause_status: UNPAUSED
+          file_arrival: /Volumes/sales_review/sales_table/trigger
       email_notifications:
           on_success:
           -  anil.kumar@axtria.com
