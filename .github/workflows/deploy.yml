@@ -20,14 +20,12 @@ jobs:
     concurrency: deploy.yml
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
 
-      - uses: databricks/databricks-import-directory@v1.0.0 # Use the latest version
-        with:
-            DATABRICKS_CLIENT_ID: dde9580d-c31d-4acf-8481-2cacab11e873
-            DATABRICKS_CLIENT_SECRET: dose6424c005fdfc57ccb1bc9e737a9970a4
-            DATABRICKS_HOST: https://dbc-c741477f-0f7d.cloud.databricks.com/
-            local-path: src/negative_review_generator.py # Path to your file within the checked-out repo
-            remote-path: /Workspace/src/negative_review_generator.py # Target path in Databricks
+      - uses: databricks/setup-cli@main
+      - name: Copy GitHub folder into Databricks workspace folder
+        run: |
+          databricks repos update /Workspace/src --branch main
       - uses: actions/checkout@v3
       - uses: databricks/setup-cli@main
       - name: Validate Bundle For dev
