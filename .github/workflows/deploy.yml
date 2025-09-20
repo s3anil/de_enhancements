@@ -30,6 +30,10 @@ jobs:
         id: latest_cli
         run:  |
           curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
+      - name: destroy bundle for databricks 
+        id: destroy_bundle 
+        run:  |
+          databricks bundle destroy --auto-approve
       - name: Validate Bundle For dev
         id: validate
         run:  |
