@@ -29,7 +29,7 @@ jobs:
 
       - name: Copy file from other branch
         run: |
-             cp -r ./temp-checkout/src/negative_review_generator.py ./Workspace/src/negative_review_generator.py
+             cp -r ./temp-checkout/src/negative_review_generator.py /Workspace/src/negative_review_generator.py
 
       - name: Clean up temporary checkout
         run: |
