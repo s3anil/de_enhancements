@@ -10,5 +10,16 @@ resources:
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
+      tasks:
+        - task_key: top_sales  #
+          depends_on:
+           - task_key: run_negative_gen
+          notebook_task:
+            notebook_path: /Workspace/src/top_sales
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZE
+      
       
 
