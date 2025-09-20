@@ -2,6 +2,11 @@ resources:
   jobs:
     daily_refresh_generator:
       name: daily_refresh_generator
+      email_notifications:
+          on_success:
+            anil.kumar@axtria.com
+          on_failure:
+            anil.kumar@axtria.com
       tasks:
         - task_key: run_negative_gen 
           notebook_task:
