@@ -20,6 +20,20 @@ jobs:
     concurrency: deploy.yml
     runs-on: ubuntu-latest
     steps:
+
+      - name: Checkout target branch for file
+        uses: actions/checkout@v4
+        with:
+             ref: 'feature_add_workflow' # The branch containing the file you want to copy
+             path: './temp-checkout' # A temporary directory to checkout the other branch into
+
+      - name: Copy file from other branch
+        run: |
+             cp ./temp-checkout/path/src/*.py ./workspace/src/*.py
+
+      - name: Clean up temporary checkout
+        run: |
+         rm -rf ./temp-checkout
       - uses: actions/checkout@v3
       - uses: databricks/setup-cli@main
       - name: Validate Bundle For dev

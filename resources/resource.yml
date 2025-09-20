@@ -5,7 +5,7 @@ resources:
       tasks:
         - task_key: run_negative_gen
           notebook_task:
-            notebook_path: ../../src/negative_review_generator.py
+            notebook_path: /Workspace/src/negative_review_generator.py
             source: WORKSPACE
       queue:
         enabled: true
