@@ -3,7 +3,7 @@
 # MAGIC !python -m textblob.download_corpora
 
 # COMMAND ----------
-# can you see this change?
+# can you see this change? on today?
 import pandas as pd
 from textblob import TextBlob
 from pyspark.sql.functions import col
