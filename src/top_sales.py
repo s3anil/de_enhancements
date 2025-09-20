@@ -1,3 +1,16 @@
+# Databricks notebook source
+# MAGIC %pip install textblob
+# MAGIC !python -m textblob.download_corpora
+
+# COMMAND ----------
+# can you see this change? on today?
+import pandas as pd
+from textblob import TextBlob
+from pyspark.sql.functions import col
+
+# Load the table into a DataFrame
+data = spark.table("samples.bakehouse.media_customer_reviews")
+
 from pyspark.sql import functions as F, Window
 
 df = spark.table("samples.bakehouse.sales_transactions")
