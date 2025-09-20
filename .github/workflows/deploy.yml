@@ -29,7 +29,7 @@ jobs:
 
       - name: Copy file from other branch
         run: |
-             cp -r ./temp-checkout/src/* ./workspace/src/
+             cp -r ./temp-checkout/src ./workspace/src
 
       - name: Clean up temporary checkout
         run: |
