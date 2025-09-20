@@ -23,9 +23,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - uses: databricks/setup-cli@main
-      - name: Copy GitHub folder into Databricks workspace folder
-        run: |
-          databricks repos update /Workspace/src --branch main
+
+      - name: Import GitHub folder into Databricks workspace folder
+        run: databricks workspace import-dir ./src /Workspace/src --overwrite
       - uses: actions/checkout@v3
       - uses: databricks/setup-cli@main
       - name: Validate Bundle For dev
