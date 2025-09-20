@@ -3,7 +3,7 @@ resources:
     daily_refresh_generator:
       name: daily_refresh_generator
       tasks:
-        - task_key: run_negative_gen
+        - task_key: run_negative_gen #
           notebook_task:
             notebook_path: /Workspace/src/negative_review_generator.py
             source: WORKSPACE
@@ -11,10 +11,4 @@ resources:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
       
-
-
-      # can send an email on pipeline failure, although GitHub will also do this
-      # email_notifications:
-      #   on_failure:
-      #     - user@email.com
 
