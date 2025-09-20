@@ -7,9 +7,6 @@ resources:
           notebook_task:
             notebook_path: /Workspace/src/negative_review_generator
             source: WORKSPACE
-      queue:
-        enabled: true
-      performance_target: PERFORMANCE_OPTIMIZE
       tasks:
         - task_key: top_sales  #
           depends_on:
