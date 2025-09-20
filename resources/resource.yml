@@ -30,7 +30,7 @@ resources:
       trigger:
           pause_status: UNPAUSED
           file_arrival: 
-              url: /Volumes/sales_review/sales_table/trigger
+              url: /Volumes/sales_review/sales_table/trigger/
       email_notifications:
           on_success:
           -  anil.kumar@axtria.com
