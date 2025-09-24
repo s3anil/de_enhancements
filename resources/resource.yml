@@ -3,7 +3,7 @@ resources:
     daily_refresh_generator: #job1
       name: daily_refresh_generator
       schedule:
-          quartz_cron_expression: '0 25 15 * * ?'
+          quartz_cron_expression: '0 54 12 * * ?'
           timezone_id: Asia/Kolkata
           pause_status: UNPAUSED
       email_notifications:
