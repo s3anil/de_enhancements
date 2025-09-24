@@ -16,7 +16,7 @@ resources:
           notebook_task:
             notebook_path: /Workspace/src/negative_review_generator
             source: WORKSPACE
-        - task_key: top_sales  
+        - task_key: top_sales  #rtask2 
           depends_on:
            - task_key: run_negative_gen
           notebook_task:
