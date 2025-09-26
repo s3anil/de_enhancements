@@ -1,4 +1,3 @@
-# Databricks notebook source
 %python
 %pip install textblob
 
