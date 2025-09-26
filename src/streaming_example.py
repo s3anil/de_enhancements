@@ -30,4 +30,3 @@ query = (
     .trigger(processingTime='10 seconds')
     .toTable("sales_review.sales_table.streaming_events_table")
 )
-)
