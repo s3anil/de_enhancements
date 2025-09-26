@@ -19,7 +19,7 @@ raw_df = (
 
 processed_df = (
     raw_df.withColumn("processing_time", current_timestamp())
-    .withColumn("event_type_upper", upper(col("event_type").cast("string")))
+    .withColumn("event_type_upper", upper(col("action").cast("string")))
 )
 
 query = (
