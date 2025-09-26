@@ -50,6 +50,21 @@ resources:
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
+    streaming_pipeline_process: #job3
+      name: daily_refresh_generator_trigger
+      email_notifications:
+          on_success:
+          -  anil.kumar@axtria.com
+          on_failure:
+          -  anil.kumar@axtria.com
+      tasks:
+        - task_key: run_negative_gen 
+          notebook_task:
+            notebook_path: /Workspace/src/streaming_example
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZE
       
       
 
