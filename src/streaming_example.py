@@ -5,7 +5,7 @@
 from pyspark.sql.functions import current_timestamp, col, upper
 
 file_path = "/databricks-datasets/structured-streaming/events"
-checkpoint_path = "/tmp/ss-tutorial/_checkpoint"
+checkpoint_path = "/Volumes/sales_review/sales_table/checkpoint"
 
 # dbutils.fs.rm(checkpoint_path, True)  # Commented out due to insufficient permissions
 
