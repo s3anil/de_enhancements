@@ -1,4 +1,6 @@
-
+# Databricks notebook source
+# MAGIC %pip install textblob
+# MAGIC !python -m textblob.download_corpora
 
 from pyspark.sql.functions import current_timestamp, col
 # Define file path and checkpoint path
