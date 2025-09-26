@@ -1,9 +1,8 @@
 # Databricks notebook source
 %python
 %pip install textblob
-# !python -m textblob.download_corpora  # Not needed for this Spark job
 
-from pyspark.sql.functions import current_timestamp, col
+from pyspark.sql.functions import current_timestamp, col, upper
 
 file_path = "/databricks-datasets/structured-streaming/events"
 checkpoint_path = "/tmp/ss-tutorial/_checkpoint"
@@ -20,7 +19,7 @@ raw_df = (
 
 processed_df = (
     raw_df.withColumn("processing_time", current_timestamp())
-    .withColumn("event_type_upper", col("event_type").cast("string").upper())
+    .withColumn("event_type_upper", upper(col("event_type").cast("string")))
 )
 
 query = (
@@ -30,4 +29,5 @@ query = (
     .option("checkpointLocation", checkpoint_path + "/delta_checkpoint")
     .trigger(processingTime='10 seconds')
     .toTable("sales_review.sales_table.streaming_events_table")
+)
 )
