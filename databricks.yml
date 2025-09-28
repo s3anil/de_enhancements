@@ -40,5 +40,7 @@ targets:
         bakehouse_summary:
           file: Workspace/dashboard/Bakehouse Summary.lvdash.json
           name: Bakehouse_Summary
+          warehouse_id: 3178695042235081
+          display_name: Bakehouse_Summary
 
 
