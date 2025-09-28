@@ -1,4 +1,10 @@
 resources:
+  dashboards:
+    bakehouse_summary: 
+      file_path: /Workspace/dashboard/bakehouse_summary.lvdash.json
+      warehouse_id: 3178695042235081
+      display_name: "bakehouse_summary"
+      name: bakehouse_summary
   jobs:
     daily_refresh_generator: #job1
       name: daily_refresh_generator

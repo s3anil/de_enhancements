@@ -35,12 +35,6 @@ targets:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
-    resources:
-      dashboards:
-        bakehouse_summary: 
-          path: /Workspace/dashboard/Bakehouse_Summary.lvdash.json
-          warehouse_id: 3178695042235081
-          display_name: bakehouse_summary
-          name: bakehouse_summary
+
 
 
