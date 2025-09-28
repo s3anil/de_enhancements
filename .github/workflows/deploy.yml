@@ -21,10 +21,10 @@ jobs:
         run: | 
              databricks workspace import-dir ./src /Workspace/src --overwrite
 
-      - uses: actions/checkout@v3
-      - name: Copy file to Databricks Volume
-        run: |
-            databricks workspace import-dir ./dashboard /Workspace/dashboard --overwrite
+  #    - uses: actions/checkout@v3
+  #    - name: Copy file to Databricks Volume
+  #      run: |
+  #          databricks workspace import-dir ./dashboard /Workspace/dashboard --overwrite
             
       - name: install latest cli
         id: latest_cli
