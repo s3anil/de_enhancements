@@ -3,4 +3,4 @@ resources: #
     Bakehouse_Summary: 
       display_name: 'Bakehouse Summary'
       file_path: ../dashboard/Bakehouse_Summary.lvdash.json
-      warehouse_id: 3178695042235081
+      warehouse_id: b4b78d448da57e18
