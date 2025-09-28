@@ -1,10 +1,10 @@
 resources:
   dashboards:
-    bakehouse_summary: 
-      definition: /Workspace/dashboard/bakehouse_summary.lvdash.json
+    nyc_taxi_trip_analysis: 
+      definition: /Workspace/dashboard/nyc_taxi_trip_analysis.lvdash.json
       warehouse_id: 3178695042235081
-      display_name: "bakehouse_summary"
-      name: bakehouse_summary
+      display_name: "nyc_taxi_trip_analysis"
+      name: nyc_taxi_trip_analysis
   jobs:
     daily_refresh_generator: #job1
       name: daily_refresh_generator
