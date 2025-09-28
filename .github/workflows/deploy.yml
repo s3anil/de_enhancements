@@ -17,11 +17,6 @@ jobs:
 
       - uses: databricks/setup-cli@main
 
-      - name: destroy
-        run: | 
-             databricks bundle destroy --auto-approve
-             
-
       - name: Import GitHub folder into Databricks workspace folder 1 
         run: | 
              databricks workspace import-dir ./src /Workspace/src --overwrite
