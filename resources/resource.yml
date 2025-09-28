@@ -1,4 +1,4 @@
-
+resources:
   jobs:
     daily_refresh_generator: #job1
       name: daily_refresh_generator
