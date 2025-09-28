@@ -38,3 +38,7 @@ jobs:
         id: deploy
         run: |
           databricks bundle deploy -t dev --force 
+      - name: Deploy Bundle destroy
+        id: destroy
+        run: |
+          databricks bundle destroy --auto-approve
