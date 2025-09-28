@@ -24,7 +24,7 @@ jobs:
       - name: Copy file to Databricks Volume
         run: |
             databricks workspace import-dir ./dashboard /Workspace/dashboard --overwrite
-
+            databricks bundle generate dashboard --existing-path /Workspace/dashboard/Bakehouse_Summary.lvdash.json --watch
       - name: install latest cli
         id: latest_cli
         run:  |
