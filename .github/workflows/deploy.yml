@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Copy file to Databricks Volume
         run: |
-             databricks fs cp ./dashboard/Bakehouse_Summary.lvdash dbfs:/Volumes/sales_review/sales_table/dashboard/Bakehouse_Summary.lvdash --overwrite
+             databricks workspace import-dir ./dashboard/ dbfs:/Volumes/sales_review/sales_table/dashboard/ --overwrite
 
       - name: install latest cli
         id: latest_cli
