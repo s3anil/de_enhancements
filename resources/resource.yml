@@ -1,7 +1,7 @@
 resources:
   dashboards:
     bakehouse_summary: 
-      file_path: /Workspace/dashboard/bakehouse_summary.lvdash.json
+      definition: /Workspace/dashboard/bakehouse_summary.lvdash.json
       warehouse_id: 3178695042235081
       display_name: "bakehouse_summary"
       name: bakehouse_summary
