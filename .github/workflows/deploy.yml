@@ -19,6 +19,7 @@ jobs:
 
       - name: Import GitHub folder into Databricks workspace folder
         run: databricks workspace import-dir ./src /Workspace/src --overwrite
+      - uses: actions/checkout@v4
       - name: Copy file to Databricks Volume
         run: |
              databricks fs cp dashboard/Bakehouse_Summary.lvdash dbfs:/Volumes/sales_review/sales_table/dashboard/Bakehouse_Summary.lvdash
