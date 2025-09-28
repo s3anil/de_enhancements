@@ -17,9 +17,11 @@ jobs:
 
       - uses: databricks/setup-cli@main
 
-      - name: Import GitHub folder into Databricks workspace folder
+      - name: Import GitHub folder into Databricks workspace folder 1 
         run: databricks workspace import-dir ./src /Workspace/src --overwrite
-             databricks workspace import-dir ./dashboard/ /Workspace/dashboard/ --overwrite
+
+      - name: Import GitHub folder into Databricks workspace folder 2
+        run: databricks workspace import-dir ./dashboard/ /Workspace/dashboard/ --overwrite
       - uses: actions/checkout@v4
       - name: Copy file to Databricks Volume
         run: |
