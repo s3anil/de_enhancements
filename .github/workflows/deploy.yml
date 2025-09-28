@@ -21,7 +21,7 @@ jobs:
         run: databricks workspace import-dir ./src /Workspace/src --overwrite
       - name: Copy file to Databricks Volume
         run: |
-             databricks fs cp dashboard/Bakehouse_Summary.lvdash /Volumes/sales_review/sales_table/dashboard/Bakehouse_Summary.lvdash
+             databricks fs cp dashboard/Bakehouse_Summary.lvdash dbfs:/Volumes/sales_review/sales_table/dashboard/Bakehouse_Summary.lvdash
 
       - name: install latest cli
         id: latest_cli
