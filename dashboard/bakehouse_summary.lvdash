@@ -1,4 +1,10 @@
 {
+    "display_name": "bakehouse_summary",
+    "parent_path": "/Workspace/dashboard",
+    "serialized_dashboard": "{}"
+}
+
+{
   "datasets": [
     {
       "name": "0053d0dc",
