@@ -1,4 +1,4 @@
-resources:
+resources: #
   dashboards:
     Bakehouse_Summary: 
       display_name: 'Bakehouse Summary'
