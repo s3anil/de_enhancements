@@ -1,6 +1,6 @@
 resources:
   dashboards:
     Bakehouse_Summary: 
-      definition: ../dashboard/Bakehouse_Summary.lvdash.json
+      file_path: ../dashboard/Bakehouse_Summary.lvdash.json
       warehouse_id: 3178695042235081
       display_name: Bakehouse_Summary
