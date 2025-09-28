@@ -39,8 +39,8 @@ targets:
       dashboards:
         bakehouse_summary: #
           file: Workspace/dashboard/Bakehouse_Summary.lvdash.json
-          name: Bakehouse_Summary
+          name: bakehouse_summary
           warehouse_id: 3178695042235081
-          display_name: Bakehouse_Summary
+          display_name: bakehouse_summary
 
 
