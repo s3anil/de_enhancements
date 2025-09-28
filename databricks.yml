@@ -37,9 +37,10 @@ targets:
       notifications: []
     resources:
       dashboards:
-        bakehouse_summary: #
-          definition: /Workspace/dashboard/Bakehouse_Summary.lvdash.json
+        bakehouse_summary: 
+          definition: ./Workspace/dashboard/Bakehouse_Summary.lvdash.json
           warehouse_id: 3178695042235081
           display_name: bakehouse_summary
+          name: bakehouse_summary
 
 
