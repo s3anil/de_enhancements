@@ -24,7 +24,7 @@ jobs:
       - name: Copy file to Databricks Volume
         run: |
             databricks workspace import-dir ./dashboard /Workspace/dashboard --overwrite
-            databricks bundle generate dashboard --resource /Workspace/dashboard/Bakehouse_Summary.lvdash.json
+            
       - name: install latest cli
         id: latest_cli
         run:  |
@@ -32,8 +32,8 @@ jobs:
       - name: Validate Bundle For dev
         id: validate
         run:  |
-          databricks bundle validate -t dev
+          databricks bundle validate -t dev 
       - name: Deploy Bundle to dev
         id: deploy
         run: |
-          databricks bundle deploy -t dev
+          databricks bundle deploy -t --force dev
