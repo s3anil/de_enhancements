@@ -2,5 +2,5 @@ resources: #z3
   dashboards:
     Bakehouse_Summary: 
       display_name: 'Bakehouse Summary'
-      file: ../dashboard/Bakehouse_Summary.lvdash.json
+      file_path: ../dashboard/Bakehouse_Summary.lvdash.json
       warehouse_id: b4b78d448da57e18
