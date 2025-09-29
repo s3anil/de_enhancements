@@ -37,4 +37,4 @@ jobs:
       - name: Deploy Bundle to dev
         id: deploy
         run: |
-          databricks bundle deploy bind -t dev
+          databricks bundle deploy -t dev
