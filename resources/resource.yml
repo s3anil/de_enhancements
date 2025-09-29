@@ -2,7 +2,7 @@ resources:
   dashboards:
     Bakehouse_Summary: 
       display_name: 'Bakehouse_Summary'
-      file_path: /Volumes/sales_review/sales_table/dashboard/Bakehouse_Summary.lvdash.json
+      file_path: /Volumes/sales_review/sales_table/dashboard/Bakehouse_Summary.lvdash
       warehouse_id: b4b78d448da57e18
   jobs:
     daily_refresh_generator: #job1
