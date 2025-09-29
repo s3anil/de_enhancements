@@ -1,6 +1,6 @@
 resources:
   dashboards:
-    Bakehouse_Summary: 
+    Bakehouse_Summary: #
       display_name: 'Bakehouse_Summary'
       file: ../src/Bakehouse_Summary.lvdash.json
       warehouse_id: b4b78d448da57e18
