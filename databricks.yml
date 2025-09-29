@@ -35,8 +35,8 @@ targets:
       catalog: catalog
       schema: ${workspace.current_user.short_name}
       notifications: []
-  sync:
-     exclude:
-      - src/*.lvdash.json
+    sync:
+       exclude:
+         - src/*.lvdash.json
 
 
