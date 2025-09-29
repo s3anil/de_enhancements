@@ -37,4 +37,4 @@ jobs:
       - name: Deploy Bundle to dev
         id: deploy
         run: |
-          databricks bundle deployment bind Bakehouse_Summary 01f09cf1bcc21e65bc25eca48bfccdc2 --target dev
+          databricks bundle deploy bind 'Bakehouse Summary' 01f09cf1bcc21e65bc25eca48bfccdc2 --target dev
