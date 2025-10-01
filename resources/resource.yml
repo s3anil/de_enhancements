@@ -31,6 +31,15 @@ resources:
                   - destination_id: 17ad9148-dd5d-4833-a58a-88e1e5026354
             warehouse_id: b4b78d448da57e18
             dashboard_id: 01f09d05148015ce8700963f8fe87eca
+        - task_key : dashboard_run_sales
+          depends_on:
+           - task_key: top_sales
+          dashboard_task:
+            subscription:
+              subscribers:
+                  - destination_id: 17ad9148-dd5d-4833-a58a-88e1e5026354
+            warehouse_id: b4b78d448da57e18
+            dashboard_id: 01f09e8995a21f31b8e0153edbb9a944
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
