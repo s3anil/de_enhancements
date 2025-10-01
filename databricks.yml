@@ -23,7 +23,7 @@ targets:
   dev:
     sync:
        exclude:
-        - src/Bakehouse_Summary.lvdash.json
+        - src/*.lvdash.json
     # The default target uses 'mode: development' to create a development copy.
     # - Deployed resources get prefixed with '[dev my_user_name]'
     # - Any job schedules and triggers are paused by default.

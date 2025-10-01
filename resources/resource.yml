@@ -1,9 +1,4 @@
 resources:
-  dashboards:
-    Bakehouse_Summary: ###
-      display_name: 'Bakehouse_Summary'
-      file: ../src/Bakehouse_Summary.lvdash.json
-      warehouse_id: b4b78d448da57e18
   jobs:
     daily_refresh_generator: #job1
       name: daily_refresh_generator
@@ -27,6 +22,15 @@ resources:
           notebook_task:
             notebook_path: /Workspace/src/top_sales
             source: WORKSPACE
+        - task_key : dashboard_run
+          depends_on:
+           - task_key: top_sales
+          dashboard_task:
+            subscription:
+              subscribers:
+                  - destination_id: email_list
+            warehouse_id: b4b78d448da57e18
+            dashboard_id: 01f09d05148015ce8700963f8fe87eca
       queue:
         enabled: true
       performance_target: PERFORMANCE_OPTIMIZE
